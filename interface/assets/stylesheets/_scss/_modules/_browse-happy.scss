@@ -1,0 +1,29 @@
+.browse-happy {
+
+	font-size: 1.6em;
+	line-height: 60px;
+	position: relative;
+	z-index: 9999;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	text-transform: underline;
+	color: #6f6d5b;
+	border-bottom: #dfddcb;
+	background: #fffcdf;
+
+	a {
+
+		font-weight: bold;
+		color: #4f4d3b;
+
+		&:hover,
+		&:focus {
+			text-transform: underline;
+			color: #4f4d3b;
+		}
+
+	}
+
+}

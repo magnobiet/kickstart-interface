@@ -1,0 +1,39 @@
+.no-js {
+
+	noscript {
+
+		font-size: 2em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: table;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		color: #333;
+		background: #f4dc75;
+		z-index: 10000;
+
+		p {
+			display: table-cell;
+			padding: 2em;
+			vertical-align: middle;
+		}
+
+		a {
+
+			color: #333;
+			text-decoration: underline;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:visited {
+				color: #333;
+			}
+
+		}
+
+	}
+
+}

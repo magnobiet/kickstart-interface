@@ -1,0 +1,22 @@
+// Bourbon
+$prefix-for-webkit: true;
+$prefix-for-mozilla: true;
+$prefix-for-microsoft: true;
+$prefix-for-opera: true;
+$prefix-for-spec: true;
+
+$gw-column: 60px;
+$gw-gutter: 20px;
+
+// Normalize
+$legacy_browser_support: true;
+
+// Color Palette
+$black: #333;
+$white: #fff;
+
+// Defaults
+$default-font-size: 62.5%;
+$default-text-color: $black;
+$default-font-family: Arial, Helvetica, sans-serif;
+$default-container-width: 100%;

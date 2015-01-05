@@ -1,0 +1,76 @@
+@import '_variables';
+@import '_helpers';
+
+@import '../../../../bower_components/bourbon/dist/_bourbon';
+@import '../../../../bower_components/normalize-scss/_normalize';
+
+body {
+	font-size: $default-font-size;
+}
+
+a {
+
+	text-decoration: none;
+	outline: none;
+	@include prefixer(transition, all .3s ease, webkit moz ms o spec);
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		outline: none;
+	}
+
+}
+
+.off-screen {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+@import '_modules/_browse-happy';
+@import '_modules/_no-script';
+
+@import '_modules/_header';
+
+.container {
+
+	width: $default-container-width;
+	margin: 0 auto;
+	padding: 0 20px;
+	@include prefixer(box-sizing, border-box, webkit moz ms o spec);
+
+	@media screen and (min-width: 1024px) {
+		width: grid-width(12);
+		@include prefixer(box-sizing, content-box, webkit moz ms o spec);
+	}
+
+}
+
+.first {
+	margin-left: 0;
+}
+
+.last {
+	margin-right: 0;
+}
+
+.pull-left {
+	@include pull-left;
+}
+
+.pull-right {
+	@include pull-right;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+@import '_modules/_footer';

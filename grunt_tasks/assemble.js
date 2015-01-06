@@ -9,7 +9,7 @@ module.exports = function() {
 			flatten: true,
 			partials: '<%= config.app %>views/partials/*.hbs',
 			layouts: '<%= config.app %>views/layouts/',
-			data: '<%= config.app %>data/*.json',
+			data: '<%= config.app %>views/data/*.json',
 			layout: 'default.hbs'
 		},
 

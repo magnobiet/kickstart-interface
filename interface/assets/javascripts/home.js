@@ -1,25 +1,16 @@
-/* global APP */
-var HOME = (function(window, document, $, undefined) {
+var HOME = (function(window, document, $, undefined) { // jshint ignore:line
 
 	'use strict';
 
-	function mainBanner() {
+	function myMethodName() {
 
-		APP.cycle('#slider .list', {
-			prev: '#slider .prev',
-			next: '#slider .next',
-			pager: '#slider-pager',
-			centerHorz: true,
-			centerVert: true
-		});
+		console.info('HOME.myMethodName() called.');
 
 	}
 
 	function init() {
 
-		if ($(document).width() >= 1024) {
-			mainBanner();
-		}
+		myMethodName();
 
 	}
 
@@ -28,5 +19,3 @@ var HOME = (function(window, document, $, undefined) {
 	};
 
 }(window, document, jQuery));
-
-HOME.init();

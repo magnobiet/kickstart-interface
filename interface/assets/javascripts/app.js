@@ -1,5 +1,5 @@
 /* global FastClick */
-var APP = (function(window, document, $, undefined) {
+var APP = (function(window, document, $, undefined) { // jshint ignore:line
 
 	'use strict';
 
@@ -64,6 +64,10 @@ var APP = (function(window, document, $, undefined) {
 
 	/* PRIVATE ****************************************************************/
 
+	function dispatcher() {
+		return window[$('body').data('dispatcher').toUpperCase()].init();
+	}
+
 	// Based on head.js
 	function browserDetect() {
 
@@ -113,17 +117,12 @@ var APP = (function(window, document, $, undefined) {
 
 	}
 
-	function features() {
+	function features2Html() {
 
-		var browser = browserDetect();
+		var browser = browserDetect(),
+			device = browser.isMobile ? 'mobile ' : 'desktop ';
 
-		$('html').addClass(browser.name + ' ' + browser.name + '-' + browser.version);
-
-		if (browser.isMobile) {
-			$('html').addClass('is-mobile');
-		} else {
-			$('html').addClass('desktop');
-		}
+		$('html').addClass(device + browser.name + ' ' + browser.name + '-' + browser.version);
 
 	}
 
@@ -173,7 +172,13 @@ var APP = (function(window, document, $, undefined) {
 
 	function init() {
 
-		features();
+		features2Html();
+
+		$(window).on('load', function() {
+
+			dispatcher();
+
+		});
 
 		if ($('form').length) {
 			setMask();
@@ -186,6 +191,4 @@ var APP = (function(window, document, $, undefined) {
 		init: init
 	};
 
-}(window, document, jQuery));
-
-APP.init();
+}(window, document, jQuery)).init();

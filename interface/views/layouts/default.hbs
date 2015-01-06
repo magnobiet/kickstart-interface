@@ -4,53 +4,46 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>{{ title }} &mdash; TITULO</title>
+		<title>{{ title }} &mdash; {{ defaults.title }}</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
+		<meta name="description" content="{{ defaults.description }}">
+		<meta name="keywords" content="{{ defaults.keywords }}">
 		<meta name="robots" content="all">
 		<meta name="rating" content="general">
-
-		<link rel="dns-prefetch" href="//code.jquery.com">
-		<link rel="dns-prefetch" href="//ajax.googleapis.com">
-		<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+		{{#each defaults.cdn }}
+		<link rel="dns-prefetch" href="{{ this }}">{{/each }}
 
 		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 		<link rel="shortcut icon" href="favicon.ico">
 
-		<meta property="og:title" content="">
-		<meta property="og:site_name" content="">
-		<meta property="og:url" content="">
-		<meta property="og:image" content="">
-		<meta property="og:type" content="site">
-		<meta property="og:description" content="">
+		<meta property="og:title" content="{{ defaults.title }}">
+		<meta property="og:site_name" content="{{ defaults.title }}">
+		<meta property="og:url" content="{{ defaults.url }}">
+		<meta property="og:image" content="{{ defaults.image }}">
+		<meta property="og:type" content="{{ defaults.type }}">
+		<meta property="og:description" content="{{ defaults.description }}">
 
 		<link rel="canonical" href="#">
-
+		{{#if defaults.googleFonts}}
+		<link rel="stylesheet" href="{{ defaults.cdn.googleFonts }}/css?family={{#each defaults.googleFonts }}{{ this }}{{#if @last}}{{else}}|{{/if}}{{/each }}">{{/if}}
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
-		{{#if slug-is-css}}<link rel="stylesheet" href="assets/stylesheets/{{slug}}.css">
-		{{else}}{{#if stylesheet}}<link rel="stylesheet" href="assets/stylesheets/{{stylesheet}}.css">
-		{{/if}}{{/if}}
+		<link rel="stylesheet" href="assets/stylesheets/{{#if slug-is-css}}{{slug}}{{else}}{{#if stylesheet}}{{stylesheet}}{{/if}}{{/if}}.css">
 
 		<!--[if lt IE 9]>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<script src="{{ defaults.cdn.cloudflare }}/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="{{ defaults.cdn.cloudflare }}/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 	</head>
 
-	<body id="page-{{slug}}" class="page-{{slug}}">
+	<body id="page-{{slug}}" class="page-{{slug}}"{{#if slug-is-js}} data-dispatcher="{{slug}}"{{else}}{{#if javascript}} data-dispatcher="{{javascript}}"{{/if}}{{/if}}>
 
 		{{> browse-happy }}
-
 		{{> header }}
-
 		{{> body }}
-
 		{{> footer }}
-
 		{{> javascripts }}
 
 	</body>

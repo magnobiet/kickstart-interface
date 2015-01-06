@@ -18,8 +18,17 @@ debug: false
 
 				<section>
 
-					<h2>SECTION TITLE</h2>
-					<p>SECTION CONTENT. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quis consequuntur quidem culpa placeat doloribus numquam, ut quam fugit praesentium, neque nemo assumenda iusto quos a dolorem. Hic perferendis, consequuntur.</p>
+					<h2>Lipsum</h2>
+
+					{{#each ipsum }}
+					<ul>
+						<li>
+							<h3>{{ this.title }}</h3>
+							<p>{{ this.description }}</p>
+							<a href="{{ this.link }}">Leia mais...</a>
+						</li>
+					</ul>
+					{{/each }}
 
 				</section>
 

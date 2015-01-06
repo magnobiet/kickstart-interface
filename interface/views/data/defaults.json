@@ -1,0 +1,24 @@
+{
+	"defaults": {
+		"name": "KickStart",
+		"title": "KickStart Interface",
+		"description": "",
+		"keywords": "",
+		"url": "",
+		"imagem": "",
+		"type": "site",
+		"analytics": "UA-XXXXXXX-XX",
+		"cdn": {
+			"jquery": "//code.jquery.com",
+			"googleAjax": "//ajax.googleapis.com",
+			"googleFonts": "//fonts.googleapis.com",
+			"cloudflare": "//cdnjs.cloudflare.com"
+		},
+		"googleFonts": [
+			"Open+Sans",
+			"Inconsolata:italic",
+			"Droid+Sans:700",
+			"Tangerine:bold,bolditalic"
+		]
+	}
+}

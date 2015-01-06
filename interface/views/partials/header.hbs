@@ -3,11 +3,20 @@
 				<div class="container">
 
 					<h1>
-						<span itemprop="name" class="off-screen">EMPRESA</span>
-						<a href="home.html" title="Ir para a página inicial da EMPRESA" class="logo">
-							<img src="//placehold.it/240x60&text=BRAND" itemprop="brand" alt="Logo da EMPRESA" arial-hidden="true">
+						<span itemprop="name" class="off-screen">{{ defaults.name }}</span>
+						<a href="home.html" title="Ir para a página inicial do {{ defaults.name }}" class="logo">
+							<img src="//placehold.it/240x60&text=BRAND" itemprop="brand" alt="Logo do {{ defaults.name }}" arial-hidden="true">
 						</a>
 					</h1>
+
+					<nav class="nav" role="navigation">
+						<ul>
+						<li><a href="#" title="Página Inicial">Página Inicial</a></li>
+						<li><a href="#sobre-nos" title="Sobre nós">Sobre nós</a></li>
+						<li><a href="#clientes" title="Clientes">Clientes</a></li>
+						<li><a href="#fale-conosco" title="Fale conosco">Fale conosco</a></li>
+						</ul>
+					</nav>
 
 				</div>
 

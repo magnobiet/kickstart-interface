@@ -2,10 +2,14 @@
 @import '_helpers';
 
 @import '../../../../bower_components/bourbon/dist/_bourbon';
+
+//@import '../../../../bower_components/meyer-reset/stylesheets/_meyer-reset';
 @import '../../../../bower_components/normalize-scss/_normalize';
 
 body {
-	font-size: $default-font-size;
+	font: {
+		family: $font-open-sans;
+	}
 }
 
 a {

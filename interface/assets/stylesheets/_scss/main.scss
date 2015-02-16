@@ -1,10 +1,8 @@
-@import '_variables';
-@import '_helpers';
+@import "_variables";
+@import "_helpers";
 
-@import '../../../../bower_components/bourbon/dist/_bourbon';
-
-//@import '../../../../bower_components/meyer-reset/stylesheets/_meyer-reset';
-@import '../../../../bower_components/normalize-scss/_normalize';
+// bower:scss
+// endbower
 
 body {
 	font: {
@@ -37,10 +35,10 @@ a {
 	width: 1px;
 }
 
-@import '_modules/_browse-happy';
-@import '_modules/_no-script';
+@import "_modules/_browse-happy";
+@import "_modules/_no-script";
 
-@import '_modules/_header';
+@import "_modules/_header";
 
 .container {
 
@@ -65,11 +63,11 @@ a {
 }
 
 .pull-left {
-	@include pull-left;
+	float: left;
 }
 
 .pull-right {
-	@include pull-right;
+	float: right;
 }
 
 .hidden {
@@ -77,4 +75,4 @@ a {
 	visibility: hidden;
 }
 
-@import '_modules/_footer';
+@import "_modules/_footer";

@@ -9,6 +9,15 @@ module.exports = function() {
 			livereload: '<%= connect.options.livereload %>'
 		},
 
+		bower: {
+			files: [
+				'<%= config.app %>bower.json'
+			],
+			tasks: [
+				'wiredep'
+			]
+		},
+
 		html: {
 			files: [
 				'<%= config.app %>.html'

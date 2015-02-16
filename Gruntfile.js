@@ -11,6 +11,8 @@ module.exports = function(grunt) {
 
 		config: grunt.file.readJSON('config.json'),
 
+		wiredep: require('./grunt_tasks/wiredep')(),
+
 		watch: require('./grunt_tasks/watch')(),
 		connect: require('./grunt_tasks/connect')(),
 
@@ -50,6 +52,7 @@ module.exports = function(grunt) {
 		}
 
 		grunt.task.run([
+			'wiredep',
 			'concurrent',
 			'connect:livereload',
 			'watch'
@@ -58,6 +61,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('build', [
+		'wiredep',
 		'sass',
 		'autoprefixer',
 		'cssmin',

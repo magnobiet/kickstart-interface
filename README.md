@@ -1,4 +1,4 @@
-# [KickStart Interface](https://bitbucket.org/maqinainternet/kickstart-interface)
+# [KickStart Interface](https://github.com/magnobiet/kickstart-interface/)
 
 ## Dependencies
 
@@ -32,4 +32,4 @@ grunt build
 
 ### Editor
 
-[Sublime Text](http://www.sublimetext.com/) with [this](https://bitbucket.org/magnobiet/sublime-text) packages
+[Sublime Text](http://www.sublimetext.com/) with [this](https://github.com/magnobiet/sublime-text) packages

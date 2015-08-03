@@ -1,5 +1,8 @@
 # [KickStart Interface](https://github.com/magnobiet/kickstart-interface/)  [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
+[![Dependency Status](https://img.shields.io/david/magnobiet/kickstart-interface.svg)](https://david-dm.org/addyosmani/grunt-uncss)
+[![devDependency Status](https://img.shields.io/david/dev/magnobiet/kickstart-interface.svg)](https://david-dm.org/addyosmani/grunt-uncss#info=devDependencies)
+
 ## Dependencies
 
 - [NodeJS](http://nodejs.org/)

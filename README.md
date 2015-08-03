@@ -1,4 +1,4 @@
-# [KickStart Interface](https://github.com/magnobiet/kickstart-interface/)
+# [KickStart Interface](https://github.com/magnobiet/kickstart-interface/)  [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Dependencies
 

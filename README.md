@@ -5,8 +5,6 @@
 [![Dependency Status](https://img.shields.io/david/magnobiet/kickstart-interface.svg)](https://david-dm.org/magnobiet/kickstart-interface)
 [![devDependency Status](https://img.shields.io/david/dev/magnobiet/kickstart-interface.svg)](https://david-dm.org/magnobiet/kickstart-interface#info=devDependencies)
 
-[![Join the chat at https://gitter.im/magnobiet/kickstart-interface](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/magnobiet/kickstart-interface)
-
 ## Dependencies
 
 - [NodeJS](http://nodejs.org/)
